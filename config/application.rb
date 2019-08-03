@@ -17,7 +17,7 @@ module Discover
     # the framework and any gems in your application.
 
     #Add the fonts path 
-    config.assets.path<< "#{Rails.roots}/app/assets/fonts"
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     #Precompile additional assets
     config.assets.precompile += %w(.svg .eot .woff .ttf)
