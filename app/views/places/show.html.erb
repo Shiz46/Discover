@@ -1,6 +1,9 @@
 <div class="booyah-box col-10 offset-1">
 <h1><%= @place.name %></h1
-<i><%= @place.address %></i>
+<i><%= @place.address %></i>s
+<%= image_tag photo.picture, class: 'show-image-size' %>
+<% end %>
+
 
 <br/><br/>
 <p><%= @place.description %></p>
@@ -49,6 +52,7 @@
 
 <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :picture %>
+  <%= f.input :place_id%>
   <%= f.input :caption %>
   <%= f.submit "Add a Photo", class: 'btn btn-primary'%>
   <% end %>
@@ -69,7 +73,6 @@
           <%= f.input :message %>
           <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
       </div>
-     
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit "Add a comment", class: 'btn btn-primary' %>
