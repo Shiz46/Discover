@@ -9,6 +9,10 @@ class PhotosController < ApplicationController
 
   private 
 
+   def photo 
+   end
+
+
   def photo_params 
     params.require(:caption)
   end
