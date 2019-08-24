@@ -9,6 +9,6 @@ class CreatePhotos < ActiveRecord::Migration[5.2]
 
     add_index :photos, [:user_id, :photo_id]
     add_index :photos,  :photo_id
-    add_foreign_key :place_id
+    add_foreign_key :places, :place_id
   end
 end
