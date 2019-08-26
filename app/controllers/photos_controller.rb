@@ -4,15 +4,16 @@ class PhotosController < ApplicationController
   def create
     @place = Place.find(params[:place_id])
     #@place.photos.create(photo_params)
-    @place.captions.create(photo_params.merge(user: current_user))
+    @place.photos.create(photo_params.merge(user: current_user))
     redirect_to place_path(@place)
-    # can I used merge to connect Place_Id?
+    # can I use merge to connect Place_Id?
   end
 
   private 
 
-  def caption_params 
-    params.require(:caption).permit(:caption)
+  def photo_params 
+    params.require(:photo).permit(:picture, :place, :caption)
+    # .permit(:caption) this code gives a Name error (unintitialized constant Photo)
   end
 end
 
