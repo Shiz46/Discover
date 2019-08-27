@@ -21,7 +21,7 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: postgres 
-  password: password
+  password: Classof2k15
   host: localhost
 
 development:
@@ -84,5 +84,5 @@ test:
 production:
   <<: *default
   database: discover_production
-  username: discover
-  password: <%= ENV['DISCOVER_DATABASE_PASSWORD'] %>
+  #username: discover
+  #password: <%= ENV['DISCOVER_DATABASE_PASSWORD'] %>
