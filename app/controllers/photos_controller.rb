@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
   private 
 
   def photo_params 
-    params.require(:photo).permit(:picture, :place, :caption)
+    params.require(:photos).permit(:picture, :place, :caption)
     # .permit(:caption) this code gives a Name error (unintitialized constant Photo)
   end
 end
