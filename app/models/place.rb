@@ -1,5 +1,5 @@
 class Place < ApplicationRecord
-  belongs_to :user3
+  belongs_to :user
   has_many :comments
   has_many :photos
 
@@ -8,5 +8,6 @@ class Place < ApplicationRecord
   after_validation :geocode
 
 
-  validates :name, presence: true 
+  validates :name, :address, :description,  presence: true
+  validates :name, length: {minimum: 4 }
 end
