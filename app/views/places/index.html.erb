@@ -1,7 +1,5 @@
 <% @places.each do |place| %>
 
-
-
   <div class="booyah-box col-10 offset-1">
     <h1><%= link_to  place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
@@ -21,6 +19,6 @@
           <small><%= place.comments.last.user.email %></small>
       </blockquote>
     </div>
-<% end %>
+  <% end %>
 <% end %>
 
