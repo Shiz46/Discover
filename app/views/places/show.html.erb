@@ -2,10 +2,10 @@
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <%if @photo.picture_url %>
-  <%= image_tag(@photo.picture_url)%>
+  <%= image_tag @photo.picture.url %>
   <%@place.photos.each do |photo| %>
   <%end %>
-<% end %>
+<%end %>
 
 <br/><br/>
 <p><%= @place.description %></p>
