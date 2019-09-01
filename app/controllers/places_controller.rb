@@ -64,7 +64,6 @@ def destroy
     return render plain: 'Not Allowed', status: :forbidden
   end
 
-
   @place.destroy 
   redirect_to root_path
 end 
