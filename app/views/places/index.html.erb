@@ -41,8 +41,7 @@
     <h1><%= link_to  place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
-    <%#image_tag @photo.picture.url%>
-   
+  
 
 
     <% if place.user.present? %>
@@ -61,6 +60,5 @@
       </blockquote>
     </div>
   <% end %>
-  
-<% end %>
+</div>
 
