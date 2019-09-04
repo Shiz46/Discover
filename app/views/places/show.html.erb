@@ -2,12 +2,14 @@
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <div class="clear"></div>
-    <%if @photo.picture.url %>
-    <%= image_tag photo.picture.url %>
-  <%=@place.photos.each do |photo| %> 
 
+    <%#if @photo.picture.url %>
+
+  <%@place.photos.each do |photo| %> 
+    <%= image_tag photo.picture.url%>
+    <p><%= photo.caption %></p>
   <% end %>
-<%end %>
+<%#end %>
 
 <br/><br/>
 <p><%= @place.description %></p>
