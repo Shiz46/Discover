@@ -44,10 +44,17 @@
     <h1><%= link_to  place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
+
+    <div class ="text-center">
+    <%place.photos.each do |photo| %>
+    <%=image_tag photo.picture.url class: "img-fluid" %>
+   </div>
+
   
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
+      <%end%>
     <% end %>
 
 
@@ -64,7 +71,7 @@
   <%end %>
 </div>
 <%end%>
-
+<br /><br />
 <%= paginate @places %> 
 
 
