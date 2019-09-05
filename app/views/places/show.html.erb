@@ -8,7 +8,7 @@
   <br /><br />
 
   <%@place.photos.each do |photo| %> 
-    <%= image_tag photo.picture.url%>
+    <%= image_tag photo.picture.url, class: "index-image"%>
     <h5><%= photo.caption %></h5>
   <% end %>
 

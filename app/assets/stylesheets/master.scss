@@ -61,6 +61,11 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201c""\201D""\2018""\2019";
 }
+
+.index-image {
+  max-width: 550px;
+}
+
 blockquoote:before {
   color: #ccc;
   content: open-quote;
