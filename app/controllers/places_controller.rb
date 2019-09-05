@@ -3,6 +3,9 @@ class PlacesController < ApplicationController
   
   def index 
     @places = Place.all
+    @places = Place.order("name").page(params[:page]). per(5)
+    
+
 
 
   end
@@ -10,7 +13,7 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
-    #@photo = Photo.new 
+     
   end 
 
 
@@ -21,10 +24,7 @@ class PlacesController < ApplicationController
     else
     render :new, status: :unprocessable_entity
 
-    #@photo = Photo.new(photo_params)
-    #if @photo.save
-     # redirect_to @photo
-    #end
+  
     end
   end 
 
@@ -75,9 +75,6 @@ private
 
     params.require(:place).permit(:name, :description, :address)
 
-  #def photo_params 
-    #arams.require(:photo).permit(:picture)
-  #end
   end
 end
 

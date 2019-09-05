@@ -34,6 +34,9 @@
   </a>
 </div>
 
+
+
+
 <% @places.each do |place| %>
 
 
@@ -42,7 +45,6 @@
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
   
-
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
@@ -62,4 +64,7 @@
   <%end %>
 </div>
 <%end%>
+
+<%= paginate @places %> 
+
 

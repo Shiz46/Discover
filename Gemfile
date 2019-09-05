@@ -87,3 +87,4 @@ source 'https://rails-assets.org' do
 end 
 
 gem "geocoder"
+gem "kaminari"
