@@ -72,7 +72,7 @@ gem 'figaro'
 
 gem 'fog-aws'
 
-gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave', '~> 1.3.2'
 
 
 
